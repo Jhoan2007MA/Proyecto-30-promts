@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+description: 'Getting started'
+# Optionally set API keys here instead of exporting environment variables.
+# Never commit real keys to source control.
+env:
+    GEMINI_API_KEY: AIzaSyDdzdjx7TQ_FqZbKer-KbeLJe1JwK2w2j4
+prompts:
+  - 'Convert this English to {{language}}: {{input}}'
+  - 'Translate to {{language}}: {{input}}'
+
+providers:
+  - "google:gemini-2.5-flash-lite"
+  - "google:gemini-2.5-flash"
+  # Or setup models from other providers
+  # - anthropic:messages:claude-sonnet-4-5-20250929
+  # - vertex:gemini-2.5-pro
+
+tests: file://tests/casos.yaml
